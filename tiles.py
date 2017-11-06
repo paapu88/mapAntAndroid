@@ -115,15 +115,18 @@ http://docs.jhs-suositukset.fi/jhs-suositukset/JHS197_liite2/JHS197_liite2.html
     def xy2tile(self, y, x, zoom):
         #0..1
         #xscaled = (x-0.0)/(LowerRightX-UpperLeftX)
-        x = x-UpperLeftX # in meters
+        x = x - UpperLeftX # in meters, running east
+        y = UpperLeftY - y # in meters, running south
         resolution = 2**(zoom+2)/3000
         xp = x * resolution
+        yp = y * resolution
         xtile = int(xp/256) # tiles are 256X256 pixels
-        
+        ytile = int(yp/256) 
         
         #xscaled = (x-UpperLeftX) / SizeX
         #xtile = int(xscaled * 2.0 ** (zoom+2))
-        print("xtile: ", xtile, 2.0 ** (zoom+2))
+        print("xtile: ", xtile )
+        print("ytile: ", ytile)        
     
 # http://
 # docs.jhs-suositukset.fi/jhs-suositukset/JHS197_liite3/JHS197_liite3.html
