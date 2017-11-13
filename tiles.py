@@ -105,9 +105,11 @@ http://docs.jhs-suositukset.fi/jhs-suositukset/JHS197_liite2/JHS197_liite2.html
         N = A1 * ksi * k0
         E = A1 * eta * k0 + E0
 
-        #print("phi, mylambda: ", phi, mylambda)
-        #print("Q_dot, Q_star, Q, l", Q_dot, Q_star, Q, l)
-        #print("beta, eta_dot, ksi_dot", beta, eta_dot, ksi_dot)
+        print("phi, mylambda: ", phi, mylambda)
+        print("Q_dot, Q_star, Q, l", Q_dot, Q_star, Q, l)
+        print("beta, eta_dot, ksi_dot", beta, eta_dot, ksi_dot)
+        print("hdot1. ksi1", hdot1, ksi1)
+        print("KSI ETA", ksi, eta)
         #print("ksi1,ksi2,ksi3,ksi4", ksi1,ksi2,ksi3,ksi4)
         
         return (N, E)
